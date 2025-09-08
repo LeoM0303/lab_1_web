@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Каталог магазинів</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #181818;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+            background: #222;
+            padding: 30px 0 10px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 0;
+        }
+        nav {
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        nav a.active {
+            color: #ff9800;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        main {
+            padding: 30px 10px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: #222;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+        th, td {
+            padding: 12px 20px;
+            border: 1px solid #444;
+        }
+        th {
+            background: #333;
+        }
+        button {
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #e67c00;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showTab(tab) {
+            document.getElementById('main').classList.add('hidden');
+            document.getElementById('shops').classList.add('hidden');
+            document.getElementById('contacts').classList.add('hidden');
+            document.getElementById(tab).classList.remove('hidden');
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            document.getElementById(tab + '-link').classList.add('active');
+        }
+        window.onload = function() {
+            showTab('main');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Каталог магазинів</h1>
+    </header>
+    <nav>
+        <a id="main-link" onclick="showTab('main')">Головна</a>
+        <a id="shops-link" onclick="showTab('shops')">Магазини</a>
+        <a id="contacts-link" onclick="showTab('contacts')">Контакти</a>
+    </nav>
+    <main>
+        <section id="main">
+            <h2>Каталог кращої техніки Apple</h2>
+            <p style="text-align:center; font-size:20px; margin-bottom:30px;">
+                Ласкаво просимо до нашого каталогу! Тут ви знайдете найкращі магазини, де можна придбати сучасну техніку Apple: iPhone, MacBook, iPad та аксесуари. Ми зібрали для вас перевірені магазини з якісним сервісом і вигідними цінами.
+            </p>
+            <div class="image-container">
+                <img src="image.png" alt="Error 404">
+            </div>
+        </section>
+        <section id="shops" class="hidden">
+            <h2>Наші магазини</h2>
+            <table>
+                <tr>
+                    <th>Магазин</th>
+                    <th>Перейти</th>
+                </tr>
+                <tr>
+                    <td>Yabloki</td>
+                    <td>
+                        <a href="https://yabloki.ua/?gad_source=1&gad_campaignid=1427003263&gbraid=0AAAAADKUY7_6r-U6sOzYUJfpvKre2C2jB&gclid=EAIaIQobChMI2OOF7LbJjwMV_IX9BR27MSQaEAAYASAAEgL-YvD_BwE" target="_blank">
+                            <button>Перейти</button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rozetka</td>
+                    <td>
+                        <a href="https://rozetka.com.ua/" target="_blank">
+                            <button>Перейти</button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Foxtrot</td>
+                    <td>
+                        <a href="https://www.foxtrot.com.ua/" target="_blank">
+                            <button>Перейти</button>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="contacts" class="hidden">
+            <h2>Контакти</h2>
+            <table>
+                <tr>
+                    <th>Місто</th>
+                    <th>Телефон</th>
+                </tr>
+                <tr>
+                    <td>Київ</td>
+                    <td>+38 (099) 123-45-67</td>
+                </tr>
+                <tr>
+                    <td>Львів</td>
+                    <td>+38 (093) 765-43-21</td>
+                </tr>
+                <tr>
+                    <td>Одеса</td>
+                    <td>+38 (097) 555-66-77</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
+
