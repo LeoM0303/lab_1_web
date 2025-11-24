@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Каталог — LBenfStore</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo-placeholder">L</div>
+            <div class="brand-text">
+                <h1>LBenfStore</h1>
+                <p class="tag">Майбутнє техніки Apple</p>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <button type="button" id="homeBtn" class="nav-btn active">Каталог</button>
+            <button type="button" id="shopsBtn" class="nav-btn">Партнери</button>
+            <button type="button" id="contactsBtn" class="nav-btn">Контакти</button>
+            <button type="button" id="regBtn" class="nav-btn">Реєстрація</button>
+        </nav>
+
+        <div class="controls-bar">
+            <div class="search-wrap">
+                <input id="search" type="search" placeholder="Пошук продукту..." />
+                <select id="category">
+                    <option value="">Усі</option>
+                    <option>iPhone</option>
+                    <option>Watch</option>
+                    <option>Аксесуари</option>
+                </select>
+            </div>
+            <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="main" class="panel">
+            <div class="intro glass-effect">
+                <h2>Інноваційний каталог Apple</h2>
+                <p>Ексклюзивні товари, обрані партнери та інтелектуальний пошук.</p>
+            </div>
+
+            <div id="catalog" class="grid"></div>
+
+            <div class="controls">
+                <button type="button" id="loadMore" class="btn primary-neumorphic">Завантажити ще</button>
+            </div>
+        </section>
+
+        <section id="shops" class="panel hidden">
+            <h2>Наші партнери</h2>
+            <div class="shops-grid">
+                <a class="shop-card neumorphic-card" href="https://jabko.ua" target="_blank" rel="noopener noreferrer">
+                    <img loading="lazy" src="https://jabko.ua/apple-touch-icon.png" alt="Ябко Logo">
+                    <h3>Ябко</h3>
+                    <p>Експерти з продукції Apple.</p>
+                </a>
+                <a class="shop-card neumorphic-card" href="https://rozetka.com.ua" target="_blank" rel="noopener noreferrer">
+                    <img loading="lazy" src="https://rozetka.com.ua/favicon.ico" alt="Rozetka Logo">
+                    <h3>Rozetka</h3>
+                    <p>Широкий асортимент техніки.</p>
+                </a>
+                <a class="shop-card neumorphic-card" href="https://allo.ua" target="_blank" rel="noopener noreferrer">
+                    <img loading="lazy" src="https://allo.ua/media/favicon/default/favicon.ico" alt="Алло Logo">
+                    <h3>Алло</h3>
+                    <p>Найбільша мережа магазинів.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="contacts" class="panel hidden">
+            <h2>Контакти</h2>
+            <table class="contacts-table neumorphic-card">
+                <tr><th>Місто</th><th>Телефон</th></tr>
+                <tr><td>Київ</td><td>+38 (099) 123-45-67</td></tr>
+                <tr><td>Львів</td><td>+38 (093) 765-43-21</td></tr>
+                <tr><td>Одеса</td><td>+38 (097) 555-66-77</td></tr>
+            </table>
+        </section>
+        
+        <section id="registration" class="panel hidden">
+            <h2>Реєстрація</h2>
+            <form id="registrationForm" novalidate class="neumorphic-card">
+                <div class="form-group"><label for="name">Ім'я:</label><input type="text" id="name" name="name" required><span class="error-message" id="nameError"></span></div>
+                <div class="form-group"><label for="email">Email:</label><input type="email" id="email" name="email" required><span class="error-message" id="emailError"></span></div>
+                <div class="form-group"><label for="password">Пароль (мін. 8 симв.):</label><input type="password" id="password" name="password" required><span class="error-message" id="passwordError"></span></div>
+                <div class="form-group"><label for="confirmPassword">Повтор паролю:</label><input type="password" id="confirmPassword" name="confirmPassword" required><span class="error-message" id="confirmPasswordError"></span></div>
+                <div class="form-group"><label for="age">Вік (мін. 18):</label><input type="number" id="age" name="age" min="0" required><span class="error-message" id="ageError"></span></div>
+                <div class="form-group"><label for="dob">Дата народження:</label><input type="date" id="dob" name="dob" required><span class="error-message" id="dobError"></span></div>
+                <div class="form-group">
+                    <label>Стать:</label>
+                    <div class="radio-group"><label><input type="radio" name="gender" value="male" required> Чоловіча</label><label><input type="radio" name="gender" value="female"> Жіноча</label></div>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="country">Країна:</label>
+                    <select id="country" name="country" required><option value="">Оберіть країну</option><option value="ua">Україна</option><option value="pl">Польща</option></select>
+                    <span class="error-message" id="countryError"></span>
+                </div>
+                <button type="submit" class="btn primary-neumorphic">Зареєструватися</button>
+                <div id="submit-message" class=""></div>
+            </form>
+        </section>
+    </main>
+
+        <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+        <div class="modal-body glass-effect">
+            <button type="button" id="closeModal" class="close" aria-label="Закрити діалог">✕</button>
+            <img id="modalImg" src="" alt="">
+            <div class="modal-info">
+                <h3></h3>
+                <p></p>
+                <p class="price"></p>
+                <p class="muted"></p>
+                <a id="modalShop" class="btn primary-neumorphic" href="#" target="_blank" rel="noopener">Купити в магазині</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
