@@ -1,4 +1,3 @@
-// --- КОНСТАНТИ ---
 const catalog = document.getElementById('catalog');
 const SHOP_URLS = {
     'jabko': 'https://jabko.ua',
@@ -8,7 +7,6 @@ const SHOP_URLS = {
 const PAGE = 12;
 let offset = 0;
 
-// Оновлено згідно з останнім списком файлів
 const MODELS = {
     'iPhone': [
         {
@@ -63,7 +61,6 @@ const MODELS = {
     ]
 };
 
-// --- ФУНКЦІЇ КАТАЛОГУ (незмінні) ---
 
 function makeProduct(id) {
     const categories = Object.keys(MODELS);
@@ -117,7 +114,6 @@ function loadPage() {
     offset += PAGE;
 }
 
-// --- КЕРУВАННЯ ІНТЕРФЕЙСОМ ТА ПОДІЯМИ (незмінні) ---
 
 function showTab(idBtn, idPanel) {
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -182,7 +178,6 @@ if (themeToggle) {
 }
 
 
-// Логіка модального вікна
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modalImg');
 const closeModal = document.getElementById('closeModal');
@@ -230,8 +225,6 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && closeModal) closeModal.click();
 });
 
-
-// --- ВАЛІДАЦІЯ ФОРМИ РЕЄСТРАЦІЇ (незмінна) ---
 
 const form = document.getElementById('registrationForm');
 const submitMessage = document.getElementById('submit-message');
@@ -346,5 +339,4 @@ if (form) {
     });
 }
 
-// --- ІНІЦІАЛІЗАЦІЯ ---
 loadPage();
