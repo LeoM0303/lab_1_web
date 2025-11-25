@@ -11,24 +11,20 @@ const MODELS = {
     'iPhone': [
         {
             model: 'iPhone 17 Pro Max', mem: '512GB', color: 'Aero Blue', base: 1499, shop: 'jabko',
-            img_card: 'iphone 17.png', 
-            img_large: 'iphone 17.png',
+            img_card: 'Apple-iPhone-17 Pro-Max.png.webp', 
+            img_large: 'Apple-iPhone-17 Pro-Max.png.webp',
         },
         {
             model: 'iPhone 16 Pro Max', mem: '1TB', color: 'Titanium', base: 1999, shop: 'rozetka',
             img_card: '16pro.png', 
             img_large: '16pro.png',
         },
-        {
-            model: 'iPhone 15 Pro Max', mem: '256GB', color: 'Cosmic Black', base: 1399, shop: 'jabko',
-            img_card: 'Apple-iPhone-1....png', // Зберігаємо скорочене ім'я, щоб уникнути помилок, якщо повне ім'я невідоме
-            img_large: 'Apple-iPhone-1....png',
-        },
+
     ],
     'Watch': [
         {
             model: 'Apple Watch X (2025)', mem: '', color: 'Silver', base: 599, shop: 'rozetka',
-            img_card: 'apple_watch.jpeg', // Зберігаємо скорочене ім'я
+            img_card: 'apple_watch.jpeg', 
             img_large: 'apple_watch.jpeg',
         },
         {
