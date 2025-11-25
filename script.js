@@ -28,8 +28,8 @@ const MODELS = {
     'Watch': [
         {
             model: 'Apple Watch X (2025)', mem: '', color: 'Silver', base: 599, shop: 'rozetka',
-            img_card: 'apple_watch.jp...', // Зберігаємо скорочене ім'я
-            img_large: 'apple_watch.jp...',
+            img_card: 'apple_watch.jpeg', // Зберігаємо скорочене ім'я
+            img_large: 'apple_watch.jpeg',
         },
         {
             model: 'Watch Ultra 3', mem: '', color: 'Titanium', base: 799, shop: 'jabko',
@@ -50,14 +50,9 @@ const MODELS = {
         },
         {
             model: 'Bio-Fibre Case', mem: '', color: 'Green', base: 69, shop: 'allo',
-            img_card: 'beo_fibra.jpg', // ВИПРАВЛЕНО на beo_fibra.jpg
-            img_large: 'beo_fibra.jpg',
+            img_card: 'case.png', 
+            img_large: 'case.png',
         },
-        {
-            model: 'Silicone Case', mem: '', color: 'Starlight', base: 49, shop: 'rozetka',
-            img_card: 'caseforiphone.jpg', // ВИПРАВЛЕНО: найбільш імовірне ім'я
-            img_large: 'caseforiphone.jpg',
-        }
     ]
 };
 
