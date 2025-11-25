@@ -53,6 +53,11 @@ const MODELS = {
             img_card: 'case.png', 
             img_large: 'case.png',
         },
+        {
+            model: 'Silicone Case', mem: '', color: 'Black', base: 49, shop: 'allo',
+            img_card: 'case.png', 
+            img_large: 'case.png',
+        }
     ]
 };
 
